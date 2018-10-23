@@ -1,9 +1,8 @@
-package runProcess;
 
 import java.io.IOException;
 import java.util.Arrays;
 
-public class runprocess {
+public class RunProcess {
 	public static void main(String[] args) throws IOException {
 		if (args.length <= 0) {
 			System.err.println("Se necesita un programa a ejecutar");
@@ -11,7 +10,9 @@ public class runprocess {
 		}
 		ProcessBuilder pb = new ProcessBuilder(args);
 		try {
+			//Ejecuta el proceso
 			Process process = pb.start();
+			//El waitFor() espera a que el proceso termine
 			int retorno = process.waitFor();
 			System.out.println("La ejecución de " + Arrays.toString(args) + " devuelve " + retorno);
 		} catch (IOException ex) {
