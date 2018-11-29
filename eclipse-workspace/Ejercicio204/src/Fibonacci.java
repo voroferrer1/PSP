@@ -4,8 +4,7 @@ import java.util.Arrays;
 public class Fibonacci extends Thread{
 	int numero;
 	public Fibonacci(int N){
-		this.numero = N;
-		
+		this.numero = N;		
 	}
 	public void run() {
 		int[] NFib=new int[numero];		
