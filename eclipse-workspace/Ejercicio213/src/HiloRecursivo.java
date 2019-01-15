@@ -6,4 +6,5 @@ public class HiloRecursivo {
 		LanzaHiloR hilo = new LanzaHiloR();
 		hilo.start();
 	}
+	
 }
